@@ -17,7 +17,9 @@
 /.next/
 /out/
 
-wasm/target/*
+wasm-rust/target/*
+wasm-ts/node_modules/*
+wasm-ts/dist/*
 
 # production
 /build

@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "build-wasm": "wasm-pack build wasm --target web --out-dir ../pkg"
+    "build-wasm": "wasm-pack build wasm --target web --out-dir ../pkg",
+    "build-wasm-ts": "cd wasm-ts && npm run build && cd .."
   },
   "dependencies": {
     "react": "19.0.0-rc-02c0e824-20241028",

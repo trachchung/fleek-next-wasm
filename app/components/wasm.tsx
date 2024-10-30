@@ -8,14 +8,15 @@ interface WasmAddTwoProps {
   number2: number;
 }
 
+/* eslint-disable @typescript-eslint/no-explicit-any */
 const WasmAddTwoComponent = ({ number1, number2 }: WasmAddTwoProps) => {
   const [addTwo, setAddTwo] =
     useState<(number1: number, number2: number) => number>();
 
   useEffect(() => {
     const loadWasm = async () => {
-      const wasmModule = await import("@/../pkg/fleek_next_wasm_bg.wasm");
-      setAddTwo(() => wasmModule.add_two);
+      const wasmModule = (await import("@/../pkg/index.wasm")) as any;
+      setAddTwo(() => wasmModule.add);
     };
 
     loadWasm();
