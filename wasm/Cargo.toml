@@ -1,0 +1,14 @@
+[package]
+name = "fleek-next-wasm"
+version = "0.0.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+wasm-bindgen = "0.2.89"
+
+[profile.release]
+lto = "fat"
+codegen-units = 1
