@@ -14,9 +14,16 @@ Next.js web app can add two numbers using Webassembly (WASM). It is deployed usi
 - Wasm-pack Rust CLI https://rustwasm.github.io/wasm-pack/installer/
 
 ```bash
+# install next.js dependencies
 npm install
+
+# Build rust to wasm file
 npm run build-wasm
+
+# Build next.js app
 npm run build
+
+# Run next.js on local machine
 npm run dev
 ```
 
